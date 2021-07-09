@@ -18,13 +18,12 @@ export default function App1(){
   const difInTime = endDate.getTime() - startDate.getTime();
   const difInDays = difInTime / (1000 * 3600 * 24);
   const toHours = difInDays * 24;
-  const toMiller = timeEarth / (toHours * timeMiller);
-  const timeEarth = ('61362');
-  const timeMiller = ('60');
-
+  const toMiller = (toHours * 60) / 61362;
+  
   return (
     <View style={Style.conteiner}>
       <Text style={Style.txtHeader}>Miller Calculator</Text>
+
       <Text style={Style.txtContent}>Please, select start date:</Text>
         <DatePicker
           date={startDate}
@@ -42,7 +41,7 @@ export default function App1(){
       <Button
       title='Calculate'
       color='#fff'
-      onPress={() => Alert.alert('The total is  ' + toMiller)}
+      onPress={() => Alert.alert('The total number of minutes that have passed on planet Miller is:  ' + toMiller )}
       />
     </View>
   );
