@@ -15,7 +15,10 @@ const moment = extendMoment(Moment);
 export default function App1(){
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
-  const dayRange = moment.range(startDate, endDate);
+  const difInTime = endDate.getTime() - startDate.getTime();
+  const difInDays = difInTime / (1000 * 3600 * 24);
+  const toHours = difInDays * 24;
+  const toMiller = timeEarth / (toHours * timeMiller);
   const timeEarth = ('61362');
   const timeMiller = ('60');
 
@@ -39,6 +42,7 @@ export default function App1(){
       <Button
       title='Calculate'
       color='#fff'
+      onPress={() => Alert.alert('The total is  ' + toMiller)}
       />
     </View>
   );
