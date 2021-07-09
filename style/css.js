@@ -17,7 +17,7 @@ export default StyleSheet.create({
     },
     txtResult:{
         color:'#fff',
-        fontSize:25,
+        fontSize:15,
     },
     buttonCalc:{
         color:'#fff',
