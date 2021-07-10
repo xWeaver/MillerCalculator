@@ -2,5 +2,8 @@
 # React Native - Miller Calculator
 Project designed to calculate how much time has passed on planet Miller (Interstellar) from a reference time based on Earth.
 
-![Screen01](https://github.com/xWeaver/MillerCalculator/blob/main/img/ScreenshotIOS1.png)
-![Screen02](https://github.com/xWeaver/MillerCalculator/blob/main/img/ScreenshotIOS2.png)
+Project running on iOS
+![Screen01](https://github.com/xWeaver/MillerCalculator/blob/main/img/iOS.png)
+
+Project running on Android
+![Screen02](https://github.com/xWeaver/MillerCalculator/blob/main/img/Android.png)
