@@ -4,8 +4,8 @@ export default StyleSheet.create({
     conteiner:{
         flex:1,
         backgroundColor:'#4a2673',
-        alignItems:'center', // Alinhamento vertical (eixo transversal/secundário)
-        justifyContent:'center', // Alinhamento horizontal (eixo principal)
+        alignItems:'center',
+        justifyContent:'center',
     },
     txtHeader:{
         color:'#fff',

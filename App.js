@@ -12,7 +12,7 @@ import Style from './style/css.js';
 
 const moment = extendMoment(Moment);
 
-export default function App1(){
+export default function MainCalculator(){
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
   const difInTime = endDate.getTime() - startDate.getTime();
@@ -41,7 +41,7 @@ export default function App1(){
       <Button
       title='Calculate'
       color='#fff'
-      onPress={() => Alert.alert('The total number of minutes that have passed on planet Miller is:  ' + toMiller )}
+      onPress={() => Alert.alert('The total number of minutes that have passed on planet Miller is:  ' + Math.trunc(toMiller) )}
       />
     </View>
   );
