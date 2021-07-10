@@ -21,5 +21,10 @@ export default StyleSheet.create({
     },
     buttonCalc:{
         color:'#fff',
-    }
+    },
+    logoStyle:{
+        width:370,
+        height:200,
+        resizeMode: 'contain'
+    },
 })
