@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { 
-  View, 
   Text, 
-  Button, 
+  TouchableOpacity, 
   Alert,
-  Image, 
+  Image,
+  ScrollView,
+  SafeAreaView, 
  } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 import Moment from 'moment';
@@ -22,7 +23,8 @@ export default function MainCalculator(){
   const toMiller = (convertToHours * 60) / 61362;
   
   return (
-    <View style={Style.conteiner}>
+    <SafeAreaView style={Style.conteiner}>
+    <ScrollView contentContainerStyle={{flexGrow : 1, justifyContent : 'center', alignItems: 'center',}}>
        <Image
         source={require('./img/millerlogo.png')}
         style={Style.logoStyle}
@@ -33,6 +35,7 @@ export default function MainCalculator(){
           mode='date'
           textColor='#fff'
           onDateChange={setStartDate}
+          androidVariant="nativeAndroid"
        />
       <Text style={Style.txtContent}>Please, select final date:</Text>
         <DatePicker
@@ -40,12 +43,15 @@ export default function MainCalculator(){
           textColor='#fff'
           mode='date'
           onDateChange={setEndDate}
+          androidVariant="nativeAndroid"
         />
-      <Button
-      title='Calculate'
-      color='#fff'
-      onPress={() => Alert.alert('In the selected time interval, approximately ' + Math.trunc(toMiller) + ' minutes have elapsed on the planet Miller.' )}
-      />
-    </View>
+      <TouchableOpacity
+      style={Style.buttonCalc}
+      onPress={() => Alert.alert('Nice trip, crew!','In the selected time interval, approximately ' + Math.trunc(toMiller) + ' minutes have elapsed on the planet Miller.' )}
+      >
+      <Text>Calculate</Text>
+      </TouchableOpacity>
+    </ScrollView>
+    </SafeAreaView>
   );
 };
